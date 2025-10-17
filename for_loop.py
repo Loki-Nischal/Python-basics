@@ -70,4 +70,52 @@ for value in d.values():
 # # another method for printing values only
 # for (key,value) in d.values():
 #     print("Value is:",value)
+
+#while loops 
+x = 0;
+while(x <= 5):
+    print("Value of x is:",x)
+    x += 1
+else:
+    print("While loop is ended here")
+
+# 3 keywords used in Loops 
+# break = Breaks out of the current closest enclosong loop
+# continue = goes to the top of the closest enclosing loop 
+# pass = does nothing at all
+
+Mystring = "Hello World"
+for char in Mystring:
+    if char == "o":
+         continue #goes back to the top of the loop
+    print(char)
+# Output:
+# H
+# e
+# l
+# l
+ 
+# W
+# r
+# l
+# d
+
+for char in Mystring:
+    if char == "o":
+         break #exits the loop
+    print(char)
+
+# Output:
+ #H
+ #e
+ #l
+ #l
+
+y = 0
+while(y < 5):
+    
+    if(y == 3):
+        break 
+    print("Value of y is:",y)
+    y += 1
    
