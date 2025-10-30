@@ -8,7 +8,7 @@ while True:
         case "add":
             todo = input("Enter a todo: ") + "\n"
             file = open('todos.txt','r')
-            todos = file.readline()
+            todos = file.readlines() #readlines function returns a list
             file.close()
 
             todos.append(todo)
@@ -19,7 +19,10 @@ while True:
 
  
         case "show":
-         
+            file = open('todos.txt','r')
+            todos = file.readlines()
+            file.close()
+
             for index,item in enumerate(todos): #enumerate function returns both the index and the item from the list
                 print( f"{index+1}.{item}")
 
@@ -34,6 +37,10 @@ while True:
             existing_todo = todos[number - 1]
             print(f"You are editing: {existing_todo}")
             new_todo = input("Enter the new todo: ") + "\n"
+            file = open('todos.txt','r')
+            todos = file.readlines()
+            file.close()
+
             todos[number - 1] = new_todo 
       
 
